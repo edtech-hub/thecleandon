@@ -4,7 +4,6 @@ The client sells on Shopify, so store elements follow Shopify's reference theme 
 
 | Element | Source | What we changed |
 |---|---|---|
-| Announcement bar | Dawn `sections/announcement-bar.liquid` | Message about prices being online |
 | Header: logo left, inline menu, icons, cart bubble | Dawn `sections/header.liquid`, `snippets/cart-icon-bubble` | Phone number shown at 1180px and up |
 | Services mega menu | Dawn header "mega" menu type (`component-mega-menu.css`) | Collection cards with "From" prices |
 | Mobile menu | Dawn `snippets/header-drawer.liquid` (menu-drawer) | Call and Shop buttons in the utility area |
@@ -36,3 +35,17 @@ The client sells on Shopify, so store elements follow Shopify's reference theme 
 | URLs | Shopify routes: `/collections/<handle>`, `/products/<handle>`, `/cart`, `/pages/<handle>` | Same handles as the live store, so old links keep working |
 | Font | Archivo (Shopify font library and Google Fonts), headings at width 88 | Nod to the condensed logo lettering |
 | Colors | Logo: blue lettering, orange mop figures | Blue toned to pass AA with white labels |
+
+## Home page (refined): Twenty Twenty-Five patterns
+
+The home page follows TT25's `page-business-home` and `page-shop-home` compositions, with core block markup and TT25 `theme.json` tokens (Manrope, headings weight 400, spacing presets 20 to 80, wide size 1340px, pill buttons in the contrast color, `is-style-section-1` on accent-5). Typography tokens apply site-wide so inner pages match.
+
+| Section | TT25 pattern | What we changed |
+|---|---|---|
+| Hero | `banner-intro-image` (56% media column, centered text column) with `overlapped-images` in the media slot | Real before/after chair photos; text first on phones |
+| Prices | `pricing-3-col` (bordered columns, title left, price right, full-width button) | Real starting prices from the store, four example rows per column |
+| Services | `services-3-col` (4:3 image, h3, medium paragraph) | Two rows of three |
+| Process | `heading-and-paragraph-with-image` | The store's own five steps, tile before/after photo |
+| Reviews | `testimonials-large` | Placeholder quote until real reviews arrive |
+| FAQ | `text-faqs` (two columns, top border, no accordion) | Four questions from real facts |
+| Closing | `cta-centered-heading` | Carpet canvas Easter egg behind it |

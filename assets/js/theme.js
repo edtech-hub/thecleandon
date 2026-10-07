@@ -389,7 +389,7 @@
       function base() {
         ctx.clearRect(0, 0, cv.width, cv.height);
         var w = 46 * dpr;
-        for (var x = 0; x < cv.width; x += w * 2) { ctx.fillStyle = "rgba(255,255,255,0.025)"; ctx.fillRect(x, 0, w, cv.height); }
+        
       }
       function draw() {
         base();
@@ -398,8 +398,8 @@
         marks.forEach(function (m) {
           var age = (now - m.t) / 4200, a = 0.16 * (1 - age);
           ctx.save(); ctx.translate(m.x, m.y); ctx.rotate(m.r);
-          ctx.fillStyle = "rgba(255,255,255," + a + ")"; ctx.fillRect(-20 * dpr, -30 * dpr, 40 * dpr, 60 * dpr);
-          ctx.fillStyle = "rgba(232,80,31," + a * 0.5 + ")"; ctx.fillRect(-20 * dpr, -30 * dpr, 2 * dpr, 60 * dpr); ctx.fillRect(18 * dpr, -30 * dpr, 2 * dpr, 60 * dpr);
+          ctx.fillStyle = "rgba(16,20,74," + a * 0.45 + ")"; ctx.fillRect(-20 * dpr, -30 * dpr, 40 * dpr, 60 * dpr);
+          ctx.fillStyle = "rgba(232,80,31," + a * 0.6 + ")"; ctx.fillRect(-20 * dpr, -30 * dpr, 2 * dpr, 60 * dpr); ctx.fillRect(18 * dpr, -30 * dpr, 2 * dpr, 60 * dpr);
           ctx.restore();
         });
         raf = marks.length ? requestAnimationFrame(draw) : null;

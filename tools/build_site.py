@@ -133,7 +133,7 @@ def head(root, title, desc, path, extra=""):
 <link rel="apple-touch-icon" href="{root}assets/img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Manrope:wght@300..700&amp;display=swap">
 <link rel="stylesheet" href="{root}assets/css/theme.css?v={ver('assets/css/theme.css')}">
 <meta name="site-build" content="{BUILD}">
 <script>document.documentElement.className=document.documentElement.className.replace("no-js","js");window.ROOT="{root}";</script>
@@ -157,11 +157,6 @@ VT_HEAD = r"""<script>window.addEventListener("pagereveal",function(e){if(!e.vie
 def preview_bar():
     return ('<div class="preview-bar" role="note"><span><strong>Preview</strong> made by White Phoenix for The Clean Don. Prices and options come from your current store.</span>'
             '<span class="ph-chip">Dashed boxes</span><span>mark details we still need from you.</span></div>')
-
-
-def announcement(root):
-    return (f'<div class="announcement-bar" role="region" aria-label="Announcement"><p class="announcement-bar__message">'
-            f'Every price is on the page before you book. Questions? Call <a href="tel:{TEL}">{PHONE}</a></p></div>')
 
 
 NAV = [("Home", ""), ("Services", "collections/all/"), ("Pro shop", "collections/pro-shop/"), ("About", "pages/about/"), ("Contact", "pages/contact/")]
@@ -198,7 +193,6 @@ def header(root, active):
     home = root or "./"
     return f"""<a class="skip-to-content-link button visually-hidden" href="#MainContent">Skip to content</a>
 {preview_bar()}
-{announcement(root)}
 <div class="section-header">
   <header class="header page-width">
     <button type="button" class="header__icon header__icon--menu" aria-label="Menu" aria-expanded="false" aria-controls="menu-drawer" data-menu-open>{ICON["menu"]}</button>
@@ -320,37 +314,6 @@ def breadcrumbs(root, *crumbs):
     return '<nav class="breadcrumbs" aria-label="Breadcrumbs">' + '<span aria-hidden="true">/</span>'.join(parts) + '</nav>'
 
 
-def trust(root):
-    art = {
-        "price": '<svg class="multicolumn-card__icon" viewBox="0 0 56 56" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="28" fill="#eceaf7"/><path d="M14 16h17l12 12-15 15-14-14z" fill="#1a22c4"/><circle cx="21" cy="23" r="3" fill="#eceaf7"/><path d="M27 33.5c1 1.2 2.4 1.8 3.9 1.6 1.5-.2 2.4-1.1 2.3-2.2-.1-1.3-1.4-1.7-3-2.1-1.6-.4-3-1-3.1-2.5-.1-1.3 1-2.3 2.6-2.5 1.3-.1 2.5.4 3.2 1.3M30.6 23.6v1.7M30.8 35.2v1.6" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/></svg>',
-        "photos": '<svg class="multicolumn-card__icon" viewBox="0 0 56 56" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="28" fill="#eceaf7"/><rect x="9" y="17" width="19" height="22" rx="2" fill="#fff" stroke="#10144a" stroke-width="1.6"/><path d="M12 35l4.5-5 3 3 2.5-2.5 4 4.5" fill="none" stroke="#7b4a2a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="23" r="2.4" fill="#7b4a2a"/><rect x="28" y="17" width="19" height="22" rx="2" fill="#1a22c4"/><path d="M31 35l4.5-5 3 3 2.5-2.5 4 4.5" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M39.5 21.5l1 2.2 2.3.3-1.7 1.6.4 2.3-2-1.1-2 1.1.4-2.3-1.7-1.6 2.3-.3z" fill="#e8501f"/></svg>',
-        "van": '<svg class="multicolumn-card__icon" viewBox="0 0 56 56" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="28" fill="#eceaf7"/><path d="M8 20h24v16H8z" fill="#1a22c4"/><path d="M32 24h7l6 6v6H32z" fill="#10144a"/><path d="M34 26h4.4l3.6 3.8H34z" fill="#eceaf7"/><circle cx="15" cy="37" r="4" fill="#10144a" stroke="#eceaf7" stroke-width="2"/><circle cx="38" cy="37" r="4" fill="#10144a" stroke="#eceaf7" stroke-width="2"/><path d="M12 28h12" stroke="#e8501f" stroke-width="2.4" stroke-linecap="round"/><path d="M4 42h48" stroke="#10144a" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="2 4"/></svg>',
-        "paw": '<svg class="multicolumn-card__icon" viewBox="0 0 56 56" aria-hidden="true" focusable="false"><circle cx="28" cy="28" r="28" fill="#eceaf7"/><path d="M12 34c0-5 4-8 9-8h14c5 0 9 3 9 8v5H12z" fill="#1a22c4"/><rect x="10" y="31" width="5" height="11" rx="2.5" fill="#10144a"/><rect x="41" y="31" width="5" height="11" rx="2.5" fill="#10144a"/><g fill="#e8501f"><ellipse cx="28" cy="16.5" rx="3.6" ry="3"/><circle cx="22.6" cy="12" r="1.6"/><circle cx="26.2" cy="9.6" r="1.6"/><circle cx="29.8" cy="9.6" r="1.6"/><circle cx="33.4" cy="12" r="1.6"/></g></svg>',
-    }
-    items = [("price", "See the price first", "Every service has its price on the page. No waiting on a callback to find out."),
-             ("photos", "Before and after photos", "We photograph the job when we arrive and again when we're done."),
-             ("van", "We come to you", "Your home, your rental, your office, even your driveway for detailing."),
-             ("paw", "Pets and stains welcome", "Pet urine treatment and fabric sealant are simple add-ons.")]
-    lis = "".join(f'<li class="multicolumn-card scroll-trigger animate--slide-in" style="--animation-order:{i}">{art[k]}<h3>{t}</h3><p>{d}</p></li>'
-                  for i, (k, t, d) in enumerate(items))
-    return f'<section class="multicolumn multicolumn--trust" aria-label="Why book with us"><div class="page-width"><ul class="multicolumn-list">{lis}</ul></div></section>'
-
-
-def collection_list(root, heading=True):
-    lis = []
-    for i, c in enumerate(COLLECTIONS):
-        m = col_min(c["handle"])
-        frm = f"From {money(m)}" if m else "Free estimates"
-        lis.append(f'<li class="scroll-trigger animate--slide-in" style="--animation-order:{i}"><a class="collection-card" href="{root}collections/{c["handle"]}/">'
-                   f'{media(root, c["img"], "", "(min-width: 990px) 230px, 46vw", "", c["contain"])}'
-                   f'<span class="collection-card__title">{esc(c["title"])}{ICON["arrow"]}</span><span class="collection-card__from">{frm}</span></a></li>')
-    head_html = ('<div class="title-wrapper scroll-trigger animate--slide-in"><div><h2>Shop by service</h2>'
-                 '<p class="subtitle">Five kinds of cleaning, one company. Open one to see every option and price.</p></div>'
-                 f'<a class="link animate-arrow" href="{root}collections/all/">View all</a></div>') if heading else ""
-    head_html = head_html.replace("<h2>", '<h2 id="collections-title">', 1)
-    return f'<section class="section-padding" aria-labelledby="collections-title"><div class="page-width">{head_html}<ul class="collection-list">{"".join(lis)}</ul></div></section>'
-
-
 def review_slots(root, n=3, heading=True):
     slot = ('<li class="review-slot ph"><div class="review-slot__stars">' + ICON["star"] * 5 + '</div>'
             '<div class="review-slot__lines"><span></span><span></span><span></span></div>'
@@ -359,47 +322,6 @@ def review_slots(root, n=3, heading=True):
                  '<p class="subtitle">We only show reviews customers actually wrote. Send us your Google or Facebook reviews and they go here, word for word.</p></div>'
                  f'<a class="link" href="{root}pages/reviews/">All reviews</a></div>') if heading else ""
     return f'<section class="section-padding color-scheme-2" aria-labelledby="reviews-title"><div class="page-width">{head_html}<ul class="review-slots">{slot * n}</ul></div></section>'
-
-
-FAQS = [
-    ("Is the price on the page what I pay?",
-     "For upholstery, carpet, tile, mattresses and detailing, yes: the price for the options you pick is the price. Stains like paint, oil, grease or ink that a normal clean won't lift are handled and billed separately. House, Airbnb, window, curtain and trash jobs show a starting price, and we confirm the total with you before the visit."),
-    ("How is carpet priced?", "Per 150 sq ft, roughly a 12 by 12 room. Tile and grout is per 100 sq ft. Set the quantity to match your space."),
-    ("Can you deal with pet accidents?", "Yes. Add pet urine treatment when you pick your options. It's there for carpet and every piece of upholstery."),
-    ("What does the sealant do?", "It's a protectant we put on after cleaning. Add it as an option on carpet, upholstery, or tile and grout (clear or colored)."),
-    ("Do you clean offices?", "Yes. Commercial cleaning starts with a free estimate on site."),
-    ("Do you come to me for car detailing?", "Yes. Mobile detailing comes to you. Pick your vehicle size and package for the price."),
-    ("Do you do post-construction cleans?", "Yes, as part of house cleaning. Extra paint or QuickSet removal is billed separately."),
-]
-
-
-def accordion(items, open_first=False):
-    out = []
-    for i, (q, a) in enumerate(items):
-        o = " open" if open_first and i == 0 else ""
-        out.append(f'<div class="accordion"><details{o}><summary><h3 class="accordion__title">{q}</h3>{ICON["caret"]}</summary><div class="accordion__content rte"><p>{a}</p></div></details></div>')
-    return "".join(out)
-
-
-def faq(root):
-    return f"""<section class="section-padding" aria-labelledby="faq-title">
-  <div class="page-width collapsible-content__grid">
-    <div class="scroll-trigger animate--slide-in"><h2 id="faq-title">Questions people ask</h2><p class="subtitle" style="margin-top:1.4rem">Something else? Call <a class="link" href="tel:{TEL}">{PHONE}</a> or <a class="link" href="{root}pages/contact/">send a message</a>.</p></div>
-    <div class="scroll-trigger animate--slide-in" style="--animation-order:1">{accordion(FAQS, True)}</div>
-  </div>
-</section>"""
-
-
-def carpet_band(root):
-    return f"""<section class="rich-text color-scheme-3 section-padding" aria-labelledby="band-title" data-carpet>
-  <canvas class="carpet-canvas" aria-hidden="true"></canvas>
-  <div class="rich-text__blocks page-width">
-    <h2 class="h1" id="band-title">Find your service and see the price</h2>
-    <p class="subtitle">Pick the piece, the fabric and any add-ons. The price updates as you go, and the cart keeps it all together.</p>
-    <div class="buttons"><a class="button" href="{root}collections/all/">Shop all services</a><a class="button button--secondary" href="tel:{TEL}">{ICON["phone"]}Call {PHONE}</a></div>
-    <p class="carpet-hint">Go on, run the vacuum over this carpet.</p>
-  </div>
-</section>"""
 
 
 # ---------- product form pieces ----------
@@ -454,102 +376,170 @@ def product_form(root, p, prefix="product"):
     return f'<form class="product-form" data-product-form data-handle="{p["handle"]}" novalidate>{"".join(parts)}</form>'
 
 
-# ---------- Home ----------
+# ---------- Home (Twenty Twenty-Five "page-business-home" / "page-shop-home" composition) ----------
 
-HERO_ITEMS = ["sofa-cleaning", "loveseat-cleaning", "sectional-cleaning", "armchair-cleaning", "ottoman-cleaning", "chair-barstool-cleaning"]
-HERO_SHORT = {"sofa-cleaning": "Sofa", "loveseat-cleaning": "Loveseat", "sectional-cleaning": "Sectional", "armchair-cleaning": "Armchair",
-              "ottoman-cleaning": "Ottoman", "chair-barstool-cleaning": "Chair or barstool"}
+def vprice(handle, opts):
+    for v in P[handle]["variants"]:
+        if v["options"] == opts:
+            return v["price"]
+    return P[handle]["price_min"]
 
 
-def hero(root):
-    first = P[HERO_ITEMS[0]]
-    items = "".join(
-        f'<input type="radio" id="hero-item-{i}" name="hero-item" value="{h}"{" checked" if i == 0 else ""}><label for="hero-item-{i}">{HERO_SHORT[h]}</label>'
-        for i, h in enumerate(HERO_ITEMS))
-    opts = "".join(pills(first, i, o, "hero") for i, o in enumerate(first["options"]))
-    m = META["sofa"]
-    points = [("tag", "Prices listed online"), ("camera", "Before and after photos"), ("van", "Homes, Airbnbs and offices")]
-    pts = "".join(f'<li>{ICON[k]}{t}</li>' for k, t in points)
-    return f"""<section class="hero" aria-labelledby="hero-title">
-  <div class="page-width hero__grid">
-    <div class="hero__copy">
-      <p class="hero__eyebrow caption-with-letter-spacing">Dallas-Fort Worth</p>
-      <h1 class="h0" id="hero-title">Carpet, upholstery and home cleaning, priced before you book</h1>
-      <p class="hero__text">Pick what needs cleaning, see the price, and add it to your cart. We come to you, take photos before and after, and walk you through the result.</p>
-      <div class="buttons" data-hero-cta><a class="button" href="{root}collections/all/">Shop all services</a><a class="button button--secondary" href="tel:{TEL}">{ICON["phone"]}Call {PHONE}</a></div>
-      <ul class="hero__points">{pts}</ul>
-    </div>
-    <div class="featured-product-card" data-hero-picker>
-      <div class="featured-product-card__head">
-        <div><p class="caption-with-letter-spacing muted">Price your clean</p><h2 class="h3" style="margin-top:.4rem" data-hero-title>{esc(first["title"])}</h2></div>
-        <div class="featured-product-card__media media media--transparent media--contain"><img src="{root}assets/img/sofa-400.webp" width="400" height="{round(m['h'] * 400 / m['w'])}" alt="" data-hero-img fetchpriority="high"></div>
+def wp_button(href, text, outline=False, attrs=""):
+    cls = "wp-block-button is-style-outline" if outline else "wp-block-button"
+    return f'<div class="{cls}"><a class="wp-block-button__link wp-element-button" href="{href}"{attrs}>{text}</a></div>'
+
+
+def wp_banner_intro(root):
+    """banner-intro-image (56% image column + centered text column); the image slot holds overlapped-images."""
+    return f"""<div class="wp-block-group alignfull wp-section wp-section--banner">
+  <div class="wp-block-columns alignwide wp-banner">
+    <div class="wp-block-column wp-banner__media" style="flex-basis:56%">
+      <div class="wp-overlapped">
+        <figure class="wp-block-image size-full wp-overlapped__main">{img(root, "chair-after", "Dining chair after cleaning, the stain is gone", "(min-width: 782px) 40vw, 80vw", eager=True)}<figcaption class="wp-element-caption">After</figcaption></figure>
+        <figure class="wp-block-image size-full wp-overlapped__small">{img(root, "chair-before", "The same chair before cleaning, with a stain on the fabric", "(min-width: 782px) 18vw, 40vw")}<figcaption class="wp-element-caption">Before</figcaption></figure>
       </div>
-      <form class="product-form" data-product-form data-handle="{first['handle']}" data-hero novalidate>
-        <fieldset class="product-form__input product-form__input--pill"><legend class="form__label">What needs cleaning?</legend><div class="pills">{items}</div></fieldset>
-        <div data-hero-options>{opts}</div>
-        <div class="featured-product-card__price"><span class="caption muted">Your price</span><div class="price price--large" aria-live="polite"><span class="visually-hidden">Price</span><span class="price-item price-item--regular" data-price>{money(first['variants'][0]['price'])}</span></div></div>
-        <div class="featured-product-card__buy">
-          <div class="quantity"><button class="quantity__button" type="button" name="minus" aria-label="Decrease quantity">{ICON["minus"]}</button><input class="quantity__input" type="number" id="hero-qty" name="quantity" value="1" min="1" max="50" inputmode="numeric" aria-label="Quantity"><button class="quantity__button" type="button" name="plus" aria-label="Increase quantity">{ICON["plus"]}</button></div>
-          <button type="submit" class="button product-form__submit" data-add><span>Add to cart</span></button>
-        </div>
-      </form>
-      <a class="product__view-details link animate-arrow" href="{purl(root, first)}" data-hero-link>View full details {ICON["arrow"]}</a>
+    </div>
+    <div class="wp-block-column is-vertically-aligned-center wp-banner__text">
+      <p class="is-style-text-annotation">Dallas-Fort Worth</p>
+      <h1 class="wp-block-heading has-xx-large-font-size">Carpet, upholstery and home cleaning, with the price up front</h1>
+      <p class="has-large-font-size">Choose what needs cleaning and you'll see the price before you book. We come to you and photograph the job before and after.</p>
+      <div class="wp-block-buttons" data-hero-cta>{wp_button(root + "collections/all/", "See all prices")}{wp_button("tel:" + TEL, "Call " + PHONE, True)}</div>
     </div>
   </div>
-</section>"""
+</div>"""
+
+
+def wp_pricing(root):
+    """pricing-3-col: bordered columns, title and description left, price right, full-width button."""
+    sofa, loveseat, sect = P["sofa-cleaning"], P["loveseat-cleaning"], P["sectional-cleaning"]
+    cols = [
+        ("Upholstery", "Sofas, sectionals, chairs and mattresses. Pick the fabric, add pet urine treatment or sealant.",
+         P["chair-barstool-cleaning"]["price_min"],
+         [("Sofa", sofa["price_min"]), ("Loveseat", loveseat["price_min"]), ("Sectional", sect["price_min"]), ("Queen mattress", vprice("mattress-cleaning", ["Queen"]))],
+         "collections/upholstery-cleaning/"),
+        ("Carpet and tile", "Carpet is priced per 150 sq ft, tile and grout per 100 sq ft. Wool and natural stone welcome.",
+         P["carpet-cleaning"]["price_min"],
+         [("Carpet, per 150 sq ft", P["carpet-cleaning"]["price_min"]), ("Wool carpet, per 150 sq ft", vprice("carpet-cleaning", ["Wool", "no", "no"])),
+          ("Tile and grout, per 100 sq ft", P["tile-grout-cleaning"]["price_min"]), ("Natural stone, per 100 sq ft", vprice("tile-grout-cleaning", ["Natural Stone", "no"]))],
+         "collections/carpet-and-floors/"),
+        ("Mobile detailing", "We come to you. Prices below are for a small or medium car; bigger vehicles cost a little more.",
+         P["mobile-detailing"]["price_min"],
+         [("Deluxe wash", vprice("mobile-detailing", ["Small/ Medium Car", "Deluxe Wash"])), ("Wash and wax", vprice("mobile-detailing", ["Small/ Medium Car", "Deluxe Wash & Wax"])),
+          ("Interior restoration", vprice("mobile-detailing", ["Small/ Medium Car", "Interior Restoration"])), ("Full detail", vprice("mobile-detailing", ["Small/ Medium Car", "Full Detail"]))],
+         "products/mobile-detailing/"),
+    ]
+    out = []
+    for i, (t, d, frm, rows, href) in enumerate(cols):
+        lis = "".join(f'<li><span>{esc(n)}</span><span>{money(pr)}</span></li>' for n, pr in rows)
+        out.append(f"""<div class="wp-block-column has-border-color has-accent-6-border-color wp-price-col scroll-trigger animate--slide-in" style="--animation-order:{i}">
+      <div class="wp-block-columns is-not-stacked-on-mobile wp-price-col__head">
+        <div class="wp-block-column" style="flex-basis:64%"><h3 class="wp-block-heading has-large-font-size">{t}</h3><p class="has-small-font-size">{d}</p></div>
+        <div class="wp-block-column"><p class="has-small-font-size has-text-align-right wp-price-col__from">from</p><h3 class="wp-block-heading has-text-align-right">{money(frm).replace(".00", "")}</h3></div>
+      </div>
+      <ul class="wp-block-list wp-price-list">{lis}</ul>
+      <div class="wp-block-buttons">{wp_button(root + href, "See options").replace('class="wp-block-button"', 'class="wp-block-button has-custom-width wp-block-button__width-100"')}</div>
+    </div>""")
+    return f"""<div class="wp-block-group alignfull wp-section" id="pricing">
+  <div class="wp-block-group alignwide wp-flex-between">
+    <h2 class="wp-block-heading has-x-large-font-size">Prices, before you book</h2>
+    <p class="is-style-text-annotation">Pricing</p>
+  </div>
+  <div class="wp-block-columns alignwide wp-price-cols">{"".join(out)}</div>
+  <p class="alignwide has-small-font-size wp-muted wp-note">Stains like paint, oil, grease or ink that a normal clean won't lift are handled and billed separately. House, Airbnb, window and trash jobs start from a set price and we confirm the total with you.</p>
+</div>"""
+
+
+def wp_services(root):
+    """services-3-col: 4:3 image, h3, medium paragraph. Two rows."""
+    items = [("collections/upholstery-cleaning/", "sofa", "Upholstery and mattresses", "Sofas, sectionals, chairs, ottomans, mattresses and curtains, cleaned where they are."),
+             ("collections/carpet-and-floors/", "tile", "Carpet, tile and grout", "Deep carpet cleaning, and tile and grout brought back after renovations."),
+             ("products/residential-cleaning/", "residential", "House cleaning", "Regular, deep, move-out and post-construction cleans for homes and apartments."),
+             ("products/airbnb-cleaning/", "airbnb", "Airbnb turnovers", "Beds made, bathrooms disinfected, kitchen reset and photos of every room."),
+             ("products/mobile-detailing/", "detailing", "Mobile detailing", "From a deluxe wash to a full detail, done in your driveway."),
+             ("collections/commercial-and-property/", "trash", "Commercial and trash removal", "Free on-site estimates for offices, plus haul-offs to the curb or the dump.")]
+    cols = []
+    for i, (h, k, t, d) in enumerate(items):
+        cols.append(f"""<div class="wp-block-column wp-service scroll-trigger animate--slide-in" style="--animation-order:{i % 3}">
+      <a href="{root}{h}"><figure class="wp-block-image size-full">{img(root, k, "", "(min-width: 782px) 30vw, 90vw", extra=' style="aspect-ratio:4/3;object-fit:cover"')}</figure>
+      <h3 class="wp-block-heading">{t}</h3></a>
+      <p class="has-medium-font-size">{d}</p>
+    </div>""")
+    return f"""<div class="wp-block-group alignfull wp-section is-style-section-1">
+  <div class="wp-block-group alignwide wp-flex-between"><h2 class="wp-block-heading">What we clean</h2><a class="wp-more" href="{root}collections/all/">All services</a></div>
+  <div class="wp-block-columns alignwide wp-services">{"".join(cols)}</div>
+</div>"""
+
+
+def wp_process(root):
+    """heading-and-paragraph-with-image: text column, image column."""
+    steps = "".join(f"<li><strong>{t}.</strong> {d}</li>" for t, d in P["sofa-cleaning"]["steps"])
+    return f"""<div class="wp-block-group alignfull wp-section">
+  <div class="wp-block-columns alignwide are-vertically-aligned-center wp-gap-80">
+    <div class="wp-block-column">
+      <p class="is-style-text-annotation">How a visit goes</p>
+      <h2 class="wp-block-heading">Photos at the start, a walk-through at the end</h2>
+      <p>Every upholstery, carpet and tile job follows the same five steps, so you always know where we are.</p>
+      <ol class="wp-block-list wp-steps">{steps}</ol>
+    </div>
+    <div class="wp-block-column">
+      <figure class="wp-block-image size-full">{img(root, "tile", "Tile and grout after a renovation, dirty on the left and clean on the right", "(min-width: 782px) 50vw, 100vw")}<figcaption class="wp-element-caption">Tile and grout after a renovation: before on the left, after on the right.</figcaption></figure>
+    </div>
+  </div>
+</div>"""
+
+
+def wp_testimonial(root):
+    """testimonials-large: annotation heading, large plain quote, citation. Placeholder until real reviews arrive."""
+    return f"""<div class="wp-block-group alignfull wp-section is-style-section-1">
+  <div class="wp-block-group alignwide wp-testimonial">
+    <h2 class="wp-block-heading is-style-text-annotation">What customers say</h2>
+    <blockquote class="wp-block-quote is-style-plain has-x-large-font-size ph"><p>A real review from one of your customers goes here, word for word, with their name and the service they booked.</p><cite>Google or Facebook review</cite></blockquote>
+    <p class="has-small-font-size wp-muted">We only show reviews customers actually wrote. <a href="{root}pages/reviews/">Leave a review</a></p>
+  </div>
+</div>"""
+
+
+FAQS = [
+    ("Is the price on the page what I pay?", "For upholstery, carpet, tile, mattresses and detailing, yes. Stains like paint, oil, grease or ink that a normal clean won't lift are billed separately."),
+    ("Can you deal with pet accidents?", "Yes. Add pet urine treatment when you pick your options. It's there for carpet and every piece of upholstery."),
+    ("Do you clean offices?", "Yes. Commercial cleaning starts with a free estimate on site, so the price fits your space."),
+    ("Do you do post-construction cleans?", "Yes, as part of house cleaning. Extra paint or QuickSet removal is billed separately."),
+]
+
+
+def wp_faqs(root):
+    """text-faqs: two columns of question groups with a top border."""
+    def grp(q, a):
+        return f'<div class="wp-block-group wp-faq"><h3 class="wp-block-heading">{q}</h3><p>{a}</p></div>'
+    rows = "".join(f'<div class="wp-block-columns">{"".join(grp(q, a) for q, a in FAQS[i:i + 2])}</div>' for i in range(0, len(FAQS), 2))
+    return f"""<div class="wp-block-group alignfull wp-section">
+  <div class="wp-block-group alignwide"><h2 class="wp-block-heading has-x-large-font-size">Frequently asked questions</h2>{rows}</div>
+</div>"""
+
+
+def cta_centered(root, title="See every price before you book", text="Pick the piece, the fabric and any add-ons. The cart keeps it together, and you check out when you're ready."):
+    """cta-centered-heading."""
+    return f"""<div class="wp-block-group alignfull wp-section wp-cta" data-carpet>
+  <canvas class="carpet-canvas" aria-hidden="true"></canvas>
+  <div class="wp-block-group wp-cta__inner">
+    <h2 class="wp-block-heading has-text-align-center has-xx-large-font-size">{title}</h2>
+    <p class="has-text-align-center">{text}</p>
+    <div class="wp-block-buttons is-content-justification-center">{wp_button(root + "collections/all/", "Shop all services")}{wp_button("tel:" + TEL, "Call " + PHONE, True)}</div>
+  </div>
+</div>"""
 
 
 def home(root):
-    feat = ["sofa-cleaning", "sectional-cleaning", "carpet-cleaning", "tile-grout-cleaning", "mattress-cleaning", "airbnb-cleaning", "mobile-detailing", "loveseat-cleaning"]
-    cards = "".join(product_card(root, P[h], i) for i, h in enumerate(feat))
-    airbnb_list = "".join(f"<li>{t}</li>" for t in ["Beds made, linen changed if you ask", "Bathrooms cleaned and disinfected",
-                                                     "Counters, stove top, and the microwave inside and out", "Floors vacuumed and mopped, stairs too",
-                                                     "Trash out, dishwasher loaded", "Before and after photos of every room"])
-    steps = "".join(f"<li><strong>{t}</strong><span class=\"muted\">{d}</span></li>" for t, d in P["sofa-cleaning"]["steps"])
-    return f"""
-{hero(root)}
-{trust(root)}
-{collection_list(root)}
-<section class="section-padding" style="padding-top:0" aria-labelledby="featured-title">
-  <div class="page-width">
-    <div class="title-wrapper scroll-trigger animate--slide-in"><div><h2 id="featured-title">Popular cleans</h2><p class="subtitle">Prices are the starting point. Open one to choose your options.</p></div><a class="link" href="{root}collections/all/">View all</a></div>
-    <ul class="product-grid product-grid--4 list-unstyled">{cards}</ul>
-  </div>
-</section>
-<section class="section-padding color-scheme-2" aria-labelledby="proof-title">
-  <div class="page-width image-with-text__grid">
-    <div class="image-with-text__media-item scroll-trigger animate--fade-in">
-      <div class="collage">
-        <figure class="collage__item"><span class="badge collage__label">Before</span>{media(root, "chair-before", "Dining chair with a stain on the fabric, before cleaning", "(min-width: 750px) 25vw, 46vw", "")}</figure>
-        <figure class="collage__item"><span class="badge badge--orange collage__label">After</span>{media(root, "chair-after", "The same chair after cleaning, stain gone", "(min-width: 750px) 25vw, 46vw", "")}</figure>
-        <figure class="collage__item collage__item--wide"><span class="badge collage__label">Before</span><span class="badge badge--orange collage__label collage__label--right">After</span>{media(root, "tile", "Tile and grout after a renovation, dirty on the left and cleaned on the right", "(min-width: 750px) 50vw, 100vw", "")}</figure>
-      </div>
-    </div>
-    <div class="image-with-text__content scroll-trigger animate--slide-in">
-      <p class="caption-with-letter-spacing muted">From our own jobs</p>
-      <h2 id="proof-title">What a visit looks like</h2>
-      <p class="subtitle">A stained dining chair, then the same chair after cleaning. Below it, tile and grout after a renovation. Every upholstery and carpet job follows the same five steps.</p>
-      <ol class="steps-list">{steps}</ol>
-      <div class="buttons"><a class="button" href="{root}collections/upholstery-cleaning/">Shop upholstery</a></div>
-    </div>
-  </div>
-</section>
-<section class="section-padding" aria-labelledby="hosts-title">
-  <div class="page-width image-with-text__grid image-with-text__grid--reverse">
-    <div class="image-with-text__media-item scroll-trigger animate--fade-in"><div class="image-with-text__media">{media(root, "airbnb", "Kitchen and breakfast bar in a short-term rental", "(min-width: 750px) 50vw, 100vw", "")}</div></div>
-    <div class="image-with-text__content scroll-trigger animate--slide-in">
-      <p class="caption-with-letter-spacing muted">For hosts and property managers</p>
-      <h2 id="hosts-title">Turnovers between guests</h2>
-      <p class="subtitle">Airbnb cleans start at {money(P["airbnb-cleaning"]["price_min"])}. Tell us the bedrooms and checkout time and we'll confirm the rest.</p>
-      <ul class="check-list check-list--2">{airbnb_list}</ul>
-      <div class="buttons"><a class="button" href="{purl(root, P["airbnb-cleaning"])}">Book an Airbnb clean</a><a class="button button--secondary" href="{purl(root, P["trash-removal-dumpster-to-dump"])}">Trash removal</a></div>
-    </div>
-  </div>
-</section>
-{review_slots(root)}
-{faq(root)}
-{carpet_band(root)}
-"""
+    return f"""<div class="wp-site-blocks">
+{wp_banner_intro(root)}
+{wp_pricing(root)}
+{wp_services(root)}
+{wp_process(root)}
+{wp_testimonial(root)}
+{wp_faqs(root)}
+{cta_centered(root)}
+</div>"""
 
 
 # ---------- Collections ----------
@@ -714,8 +704,7 @@ def about(root):
 <section class="section-padding color-scheme-2">
   <div class="page-width"><div class="title-wrapper"><div><h2>How we work</h2><p class="subtitle">Straight from the job descriptions every tech works to.</p></div></div><ul class="value-list">{vl}</ul></div>
 </section>
-{trust(root)}
-{carpet_band(root)}"""
+{cta_centered(root)}"""
 
 
 def reviews(root):

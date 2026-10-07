@@ -1,0 +1,1092 @@
+{
+ "4000-psi-pressure-washer": {
+  "title": "4000 psi Pressure Washer",
+  "type": "Pressure Washers",
+  "price_min": 129700,
+  "options": [],
+  "variants": []
+ },
+ "airbnb-cleaning": {
+  "title": "AirBnB Cleaning",
+  "type": "",
+  "price_min": 11250,
+  "options": [],
+  "variants": []
+ },
+ "armchair-cleaning": {
+  "title": "Armchair Cleaning",
+  "type": "Upholstery Cleaning",
+  "price_min": 5500,
+  "options": [
+   {
+    "name": "Material",
+    "values": [
+     "Standard",
+     "Linen/Leather/Cotton"
+    ]
+   },
+   {
+    "name": "Urine Treatment?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   },
+   {
+    "name": "Add Sealant?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "options": [
+     "Standard",
+     "no",
+     "no"
+    ],
+    "price": 5500
+   },
+   {
+    "options": [
+     "Standard",
+     "no",
+     "YES"
+    ],
+    "price": 8500
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "no"
+    ],
+    "price": 7500
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "YES"
+    ],
+    "price": 9200
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "no",
+     "no"
+    ],
+    "price": 8500
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "no",
+     "YES"
+    ],
+    "price": 10200
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "YES",
+     "no"
+    ],
+    "price": 9200
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "YES",
+     "YES"
+    ],
+    "price": 11000
+   }
+  ]
+ },
+ "business-planning-form-the-clean-don": {
+  "title": "Business Planning Form - The Clean Don",
+  "type": "",
+  "price_min": 4000,
+  "options": [],
+  "variants": []
+ },
+ "carpet-cleaning": {
+  "title": "Carpet Cleaning",
+  "type": "Carpet Cleaning",
+  "price_min": 5900,
+  "options": [
+   {
+    "name": "Material",
+    "values": [
+     "Standard",
+     "Wool"
+    ]
+   },
+   {
+    "name": "Urine Treatment?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   },
+   {
+    "name": "Add Sealant?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "options": [
+     "Standard",
+     "no",
+     "no"
+    ],
+    "price": 5900
+   },
+   {
+    "options": [
+     "Standard",
+     "no",
+     "YES"
+    ],
+    "price": 8400
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "no"
+    ],
+    "price": 8400
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "YES"
+    ],
+    "price": 9900
+   },
+   {
+    "options": [
+     "Wool",
+     "no",
+     "no"
+    ],
+    "price": 7900
+   },
+   {
+    "options": [
+     "Wool",
+     "no",
+     "YES"
+    ],
+    "price": 9700
+   },
+   {
+    "options": [
+     "Wool",
+     "YES",
+     "no"
+    ],
+    "price": 9700
+   },
+   {
+    "options": [
+     "Wool",
+     "YES",
+     "YES"
+    ],
+    "price": 11800
+   }
+  ]
+ },
+ "chair-barstool-cleaning": {
+  "title": "Chair/ Barstool Cleaning",
+  "type": "Upholstery Cleaning",
+  "price_min": 2000,
+  "options": [
+   {
+    "name": "Material",
+    "values": [
+     "Standard",
+     "Linen/Leather/Cotton"
+    ]
+   },
+   {
+    "name": "Urine Treatment?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   },
+   {
+    "name": "Add Sealant?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "options": [
+     "Standard",
+     "no",
+     "no"
+    ],
+    "price": 2000
+   },
+   {
+    "options": [
+     "Standard",
+     "no",
+     "YES"
+    ],
+    "price": 3000
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "no"
+    ],
+    "price": 2500
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "YES"
+    ],
+    "price": 3500
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "no",
+     "no"
+    ],
+    "price": 3000
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "no",
+     "YES"
+    ],
+    "price": 3700
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "YES",
+     "no"
+    ],
+    "price": 3500
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "YES",
+     "YES"
+    ],
+    "price": 4000
+   }
+  ]
+ },
+ "commercial-cleaning": {
+  "title": "Commercial Cleaning",
+  "type": "",
+  "price_min": 13600,
+  "options": [],
+  "variants": []
+ },
+ "curtains-drapery-in-place": {
+  "title": "Curtains/ Drapery (In-Place)",
+  "type": "Upholstery Cleaning",
+  "price_min": 7500,
+  "options": [],
+  "variants": []
+ },
+ "job-postings-epa-lead-safe-renovator": {
+  "title": "Job Postings - EPA Lead-Safe Renovator",
+  "type": "",
+  "price_min": 0,
+  "options": [],
+  "variants": []
+ },
+ "job-postings-general-contractor-copy": {
+  "title": "Job Postings - Pool Cleaner/Maintenance Technician",
+  "type": "",
+  "price_min": 0,
+  "options": [],
+  "variants": []
+ },
+ "job-postings-general-contractor": {
+  "title": "Job Postings - General Contractor",
+  "type": "",
+  "price_min": 0,
+  "options": [],
+  "variants": []
+ },
+ "job-postings": {
+  "title": "Job Postings - Cleaning Tech/Housekeeper",
+  "type": "",
+  "price_min": 0,
+  "options": [],
+  "variants": []
+ },
+ "loveseat-cleaning": {
+  "title": "Loveseat Cleaning",
+  "type": "Upholstery Cleaning",
+  "price_min": 9500,
+  "options": [
+   {
+    "name": "Material",
+    "values": [
+     "Standard",
+     "Linen/Leather/Cotton"
+    ]
+   },
+   {
+    "name": "Urine Treatment?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   },
+   {
+    "name": "Add Sealant?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "options": [
+     "Standard",
+     "no",
+     "no"
+    ],
+    "price": 9500
+   },
+   {
+    "options": [
+     "Standard",
+     "no",
+     "YES"
+    ],
+    "price": 13000
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "no"
+    ],
+    "price": 12000
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "YES"
+    ],
+    "price": 14500
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "no",
+     "no"
+    ],
+    "price": 12000
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "no",
+     "YES"
+    ],
+    "price": 15000
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "YES",
+     "no"
+    ],
+    "price": 14500
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "YES",
+     "YES"
+    ],
+    "price": 16000
+   }
+  ]
+ },
+ "mattress-cleaning": {
+  "title": "Mattress Cleaning",
+  "type": "Upholstery Cleaning",
+  "price_min": 6500,
+  "options": [
+   {
+    "name": "Size",
+    "values": [
+     "Twin",
+     "Full",
+     "Queen",
+     "King"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "options": [
+     "Twin"
+    ],
+    "price": 6500
+   },
+   {
+    "options": [
+     "Full"
+    ],
+    "price": 7500
+   },
+   {
+    "options": [
+     "Queen"
+    ],
+    "price": 8500
+   },
+   {
+    "options": [
+     "King"
+    ],
+    "price": 9500
+   }
+  ]
+ },
+ "mobile-detailing": {
+  "title": "Mobile Detailing",
+  "type": "Mobile Vehicle Cleaning",
+  "price_min": 3750,
+  "options": [
+   {
+    "name": "Vehicle Type/ Body Style",
+    "values": [
+     "Small/ Medium Car",
+     "Large Car",
+     "Small/Medium SUV/Truck/Van",
+     "Large SUV/Truck/Van"
+    ]
+   },
+   {
+    "name": "Service",
+    "values": [
+     "Deluxe Wash",
+     "Deluxe Wash & Wax",
+     "Interior Restoration",
+     "Exterior Restoration",
+     "Engine Clean",
+     "Full Detail",
+     "Deluxe Full Detail"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "options": [
+     "Small/ Medium Car",
+     "Deluxe Wash"
+    ],
+    "price": 6000
+   },
+   {
+    "options": [
+     "Small/ Medium Car",
+     "Deluxe Wash & Wax"
+    ],
+    "price": 11500
+   },
+   {
+    "options": [
+     "Small/ Medium Car",
+     "Interior Restoration"
+    ],
+    "price": 15000
+   },
+   {
+    "options": [
+     "Small/ Medium Car",
+     "Exterior Restoration"
+    ],
+    "price": 19500
+   },
+   {
+    "options": [
+     "Small/ Medium Car",
+     "Engine Clean"
+    ],
+    "price": 3750
+   },
+   {
+    "options": [
+     "Small/ Medium Car",
+     "Full Detail"
+    ],
+    "price": 25000
+   },
+   {
+    "options": [
+     "Small/ Medium Car",
+     "Deluxe Full Detail"
+    ],
+    "price": 30500
+   },
+   {
+    "options": [
+     "Large Car",
+     "Deluxe Wash"
+    ],
+    "price": 7500
+   },
+   {
+    "options": [
+     "Large Car",
+     "Deluxe Wash & Wax"
+    ],
+    "price": 13500
+   },
+   {
+    "options": [
+     "Large Car",
+     "Interior Restoration"
+    ],
+    "price": 19000
+   },
+   {
+    "options": [
+     "Large Car",
+     "Exterior Restoration"
+    ],
+    "price": 23000
+   },
+   {
+    "options": [
+     "Large Car",
+     "Engine Clean"
+    ],
+    "price": 3750
+   },
+   {
+    "options": [
+     "Large Car",
+     "Full Detail"
+    ],
+    "price": 27500
+   },
+   {
+    "options": [
+     "Large Car",
+     "Deluxe Full Detail"
+    ],
+    "price": 33000
+   },
+   {
+    "options": [
+     "Small/Medium SUV/Truck/Van",
+     "Deluxe Wash"
+    ],
+    "price": 9000
+   },
+   {
+    "options": [
+     "Small/Medium SUV/Truck/Van",
+     "Deluxe Wash & Wax"
+    ],
+    "price": 17000
+   },
+   {
+    "options": [
+     "Small/Medium SUV/Truck/Van",
+     "Interior Restoration"
+    ],
+    "price": 25000
+   },
+   {
+    "options": [
+     "Small/Medium SUV/Truck/Van",
+     "Exterior Restoration"
+    ],
+    "price": 28750
+   },
+   {
+    "options": [
+     "Small/Medium SUV/Truck/Van",
+     "Engine Clean"
+    ],
+    "price": 5750
+   },
+   {
+    "options": [
+     "Small/Medium SUV/Truck/Van",
+     "Full Detail"
+    ],
+    "price": 32000
+   },
+   {
+    "options": [
+     "Small/Medium SUV/Truck/Van",
+     "Deluxe Full Detail"
+    ],
+    "price": 39500
+   },
+   {
+    "options": [
+     "Large SUV/Truck/Van",
+     "Deluxe Wash"
+    ],
+    "price": 10500
+   },
+   {
+    "options": [
+     "Large SUV/Truck/Van",
+     "Deluxe Wash & Wax"
+    ],
+    "price": 17500
+   },
+   {
+    "options": [
+     "Large SUV/Truck/Van",
+     "Interior Restoration"
+    ],
+    "price": 24500
+   },
+   {
+    "options": [
+     "Large SUV/Truck/Van",
+     "Exterior Restoration"
+    ],
+    "price": 28750
+   },
+   {
+    "options": [
+     "Large SUV/Truck/Van",
+     "Engine Clean"
+    ],
+    "price": 6000
+   },
+   {
+    "options": [
+     "Large SUV/Truck/Van",
+     "Full Detail"
+    ],
+    "price": 34500
+   },
+   {
+    "options": [
+     "Large SUV/Truck/Van",
+     "Deluxe Full Detail"
+    ],
+    "price": 44000
+   }
+  ]
+ },
+ "ottoman-cleaning": {
+  "title": "Ottoman Cleaning",
+  "type": "Upholstery Cleaning",
+  "price_min": 4000,
+  "options": [
+   {
+    "name": "Material",
+    "values": [
+     "Standard",
+     "Linen/Leather/Cotton"
+    ]
+   },
+   {
+    "name": "Urine Treatment?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   },
+   {
+    "name": "Add Sealant?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "options": [
+     "Standard",
+     "no",
+     "no"
+    ],
+    "price": 4000
+   },
+   {
+    "options": [
+     "Standard",
+     "no",
+     "YES"
+    ],
+    "price": 5000
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "no"
+    ],
+    "price": 4500
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "YES"
+    ],
+    "price": 5200
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "no",
+     "no"
+    ],
+    "price": 5000
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "no",
+     "YES"
+    ],
+    "price": 6000
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "YES",
+     "no"
+    ],
+    "price": 5500
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "YES",
+     "YES"
+    ],
+    "price": 6500
+   }
+  ]
+ },
+ "professional-make-ready-cleaning-course": {
+  "title": "Professional Make Ready Cleaning Course",
+  "type": "",
+  "price_min": 6850,
+  "options": [],
+  "variants": []
+ },
+ "residential-cleaning": {
+  "title": "Residential Cleaning*",
+  "type": "",
+  "price_min": 12500,
+  "options": [],
+  "variants": []
+ },
+ "sectional-cleaning": {
+  "title": "Sectional Cleaning",
+  "type": "Upholstery Cleaning",
+  "price_min": 15000,
+  "options": [
+   {
+    "name": "Material",
+    "values": [
+     "Standard",
+     "Linen/Leather/Cotton"
+    ]
+   },
+   {
+    "name": "Urine Treatment?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   },
+   {
+    "name": "Add Sealant?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "options": [
+     "Standard",
+     "no",
+     "no"
+    ],
+    "price": 15000
+   },
+   {
+    "options": [
+     "Standard",
+     "no",
+     "YES"
+    ],
+    "price": 18700
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "no"
+    ],
+    "price": 17500
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "YES"
+    ],
+    "price": 19500
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "no",
+     "no"
+    ],
+    "price": 19500
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "no",
+     "YES"
+    ],
+    "price": 22500
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "YES",
+     "no"
+    ],
+    "price": 21700
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "YES",
+     "YES"
+    ],
+    "price": 23300
+   }
+  ]
+ },
+ "sofa-cleaning": {
+  "title": "Sofa Cleaning",
+  "type": "Upholstery Cleaning",
+  "price_min": 10000,
+  "options": [
+   {
+    "name": "Material",
+    "values": [
+     "Standard",
+     "Linen/Leather/Cotton"
+    ]
+   },
+   {
+    "name": "Urine Treatment?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   },
+   {
+    "name": "Add Sealant?",
+    "values": [
+     "no",
+     "YES"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "options": [
+     "Standard",
+     "no",
+     "no"
+    ],
+    "price": 10000
+   },
+   {
+    "options": [
+     "Standard",
+     "no",
+     "YES"
+    ],
+    "price": 12500
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "no"
+    ],
+    "price": 12000
+   },
+   {
+    "options": [
+     "Standard",
+     "YES",
+     "YES"
+    ],
+    "price": 14000
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "no",
+     "no"
+    ],
+    "price": 13500
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "no",
+     "YES"
+    ],
+    "price": 15000
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "YES",
+     "no"
+    ],
+    "price": 15000
+   },
+   {
+    "options": [
+     "Linen/Leather/Cotton",
+     "YES",
+     "YES"
+    ],
+    "price": 16800
+   }
+  ]
+ },
+ "tile-grout-cleaning": {
+  "title": "Tile & Grout Cleaning",
+  "type": "Carpet Cleaning",
+  "price_min": 11250,
+  "options": [
+   {
+    "name": "Material",
+    "values": [
+     "Standard",
+     "Natural Stone"
+    ]
+   },
+   {
+    "name": "Add Sealant?",
+    "values": [
+     "no",
+     "YES (Clear)",
+     "YES (Colored)"
+    ]
+   }
+  ],
+  "variants": [
+   {
+    "options": [
+     "Standard",
+     "no"
+    ],
+    "price": 11250
+   },
+   {
+    "options": [
+     "Standard",
+     "YES (Clear)"
+    ],
+    "price": 15000
+   },
+   {
+    "options": [
+     "Natural Stone",
+     "no"
+    ],
+    "price": 15650
+   },
+   {
+    "options": [
+     "Natural Stone",
+     "YES (Clear)"
+    ],
+    "price": 18250
+   },
+   {
+    "options": [
+     "Natural Stone",
+     "YES (Colored)"
+    ],
+    "price": 27250
+   },
+   {
+    "options": [
+     "Standard",
+     "YES (Colored)"
+    ],
+    "price": 21650
+   }
+  ]
+ },
+ "trash-removal-dumpster-to-dump": {
+  "title": "Trash Removal (UnPrepped to Curb/Dumpster OR Dumpster to Dump)",
+  "type": "",
+  "price_min": 17500,
+  "options": [],
+  "variants": []
+ },
+ "viral-fogging-covid-coronavirus-sars-etc": {
+  "title": "Viral Fogging (COVID/Coronavirus/SARS/etc)",
+  "type": "Disinfection",
+  "price_min": 22500,
+  "options": [],
+  "variants": []
+ },
+ "window-cleaning": {
+  "title": "Window Cleaning",
+  "type": "",
+  "price_min": 2400,
+  "options": [],
+  "variants": []
+ }
+}
